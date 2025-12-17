@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>AHENDA DRIPTECH LIMITED | Agricultural Technology & Irrigation Solutions Kenya</title>
+    <meta name="description" content="Leading agricultural technology company in Kenya providing irrigation systems, hydroponics, veterinary services, farm inputs, and modern farming solutions. Empowering farmers through innovation.">
+    <meta name="keywords" content="Agricultural technology Kenya, Irrigation systems, Hydroponics, Veterinary services, Farm inputs, Drip irrigation, Agricultural advisory, Agrochemical products, Farm structures, Agro-business">
+    <meta name="author" content="AHENDA DRIPTECH LIMITED">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="AHENDA DRIPTECH LIMITED | Agricultural Technology & Irrigation Solutions Kenya">
+    <meta property="og:description" content="Empowering Farmers Through Modern Agricultural Technology in Kenya">
+    <meta property="og:image" content="farm.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ahendadriptech.co.ke">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'agri-green': '#2E8B57',
+                        'agri-dark': '#1A5D3A',
+                        'agri-light': '#4CAF50',
+                        'agri-yellow': '#FFC107',
+                        'agri-brown': '#8B4513',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- AOS CSS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+        /* Custom underline animation */
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #4CAF50;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Card hover effect */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Protect source code */
+        body {
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+        
+        /* Allow selection in input/textarea */
+        input, textarea {
+            user-select: text;
+            -webkit-user-select: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    
+    <!-- Disable right-click and keyboard shortcuts -->
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            if (e.key === 'F12' || 
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+                (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <!-- Header / Navigation -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="logo.jpg" alt="AHENDA DRIPTECH LIMITED Logo - Agricultural Technology Company" 
+                         class="w-12 h-12 rounded-lg object-cover">
+                    <div>
+                        <h1 class="text-xl font-bold text-agri-dark">AHENDA DRIPTECH</h1>
+                        <p class="text-xs text-agri-green">LIMITED</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-agri-green font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-agri-green font-medium">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-agri-green font-medium">Services</a>
+                    <a href="#principles" class="nav-link text-gray-700 hover:text-agri-green font-medium">Principles</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-agri-green font-medium">Contact</a>
+                    <a href="#brochure" class="bg-agri-green text-white px-4 py-2 rounded-lg hover:bg-agri-dark transition duration-300 font-medium">
+                        <i class="fas fa-download mr-2"></i>Brochure
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-agri-dark">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 bg-white p-4 rounded-lg shadow-lg">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-700 hover:text-agri-green font-medium py-2">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-agri-green font-medium py-2">About</a>
+                    <a href="#services" class="text-gray-700 hover:text-agri-green font-medium py-2">Services</a>
+                    <a href="#principles" class="text-gray-700 hover:text-agri-green font-medium py-2">Principles</a>
+                    <a href="#contact" class="text-gray-700 hover:text-agri-green font-medium py-2">Contact</a>
+                    <a href="#brochure" class="bg-agri-green text-white px-4 py-3 rounded-lg hover:bg-agri-dark transition duration-300 font-medium text-center">
+                        <i class="fas fa-download mr-2"></i>Download Brochure
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="farm.jpg" alt="Modern farm landscape showcasing agricultural technology in Kenya" 
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 container mx-auto px-4 text-center text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up" data-aos="fade-up">
+                <span class="text-agri-light">AHENDA</span> DRIPTECH LIMITED
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Empowering Farmers Through Modern Agricultural Technology
+            </p>
+            <div class="space-y-4 md:space-y-0 md:space-x-6" data-aos="fade-up" data-aos-delay="400">
+                <a href="#contact" 
+                   class="inline-block bg-agri-green hover:bg-agri-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105 animate-pulse-slow">
+                    Get In Touch <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#services" 
+                   class="inline-block bg-transparent border-2 border-white hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300">
+                    Our Services
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                <div data-aos="fade-right">
+                    <img src="modern.jpg" alt="Modern agricultural technology and farm equipment in Kenya" 
+                         class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                </div>
+
+                <!-- Content -->
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl font-bold text-agri-dark mb-8">
+                        <span class="text-agri-green">About</span> Our Company
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-agri-green mb-4">WHO WE ARE</h3>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                AHENDA DRIPTECH LIMITED is an agricultural technology company headquartered in Nairobi, Kenya, 
+                                helping both small-scale and large-scale farmers maximize productivity and profitability through 
+                                innovative farming solutions.
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-semibold text-agri-green mb-4">WHAT WE DO</h3>
+                            <p class="text-gray-600 text-lg leading-relaxed">
+                                We provide farm structures, agronomical services, extension services, farm inputs, and market 
+                                access under one trusted platform. Our comprehensive approach ensures farmers get all they need 
+                                for successful farming operations.
+                            </p>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-3 gap-4 pt-6">
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-agri-green">10+</div>
+                                <div class="text-gray-600">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-agri-green">500+</div>
+                                <div class="text-gray-600">Farmers Served</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-bold text-agri-green">47</div>
+                                <div class="text-gray-600">Counties Covered</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-agri-dark mb-4">
+                    Our Agricultural <span class="text-agri-green">Services</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    Comprehensive agricultural solutions designed to maximize your farm's potential
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-aos="zoom-in">
+                    <div class="w-16 h-16 bg-agri-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tint text-agri-green text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-agri-dark mb-3">Irrigation & Hydroponics</h3>
+                    <p class="text-gray-600 mb-4">
+                        Advanced drip irrigation systems and hydroponic farming solutions for optimal water usage.
+                    </p>
+                    <img src="driptech.jpg" alt="Modern drip irrigation system installation" 
+                         class="rounded-lg w-full h-48 object-cover mt-4">
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-agri-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-seedling text-agri-green text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-agri-dark mb-3">Agro Inputs</h3>
+                    <p class="text-gray-600 mb-4">
+                        Quality seeds, fertilizers, pesticides, and other farm inputs for maximum yield.
+                    </p>
+                    <img src="tomato.jpg" alt="Fresh tomato harvest from modern farming" 
+                         class="rounded-lg w-full h-48 object-cover mt-4">
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-agri-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-heartbeat text-agri-green text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-agri-dark mb-3">Veterinary Services</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professional animal healthcare, vaccination, and livestock management services.
+                    </p>
+                    <img src="hen.jpg" alt="Healthy poultry farming with veterinary care" 
+                         class="rounded-lg w-full h-48 object-cover mt-4">
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-aos="zoom-in">
+                    <div class="w-16 h-16 bg-agri-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-warehouse text-agri-green text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-agri-dark mb-3">Farm Structures</h3>
+                    <p class="text-gray-600 mb-4">
+                        Greenhouses, poultry houses, storage facilities, and other farm infrastructure.
+                    </p>
+                    <img src="tent.jpg" alt="Modern farm structures and greenhouses" 
+                         class="rounded-lg w-full h-48 object-cover mt-4">
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-agri-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-headset text-agri-green text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-agri-dark mb-3">Agricultural Advisory</h3>
+                    <p class="text-gray-600 mb-4">
+                        Expert guidance on crop selection, farming techniques, and market trends.
+                    </p>
+                    <div class="bg-agri-green/10 rounded-lg p-4 mt-4">
+                        <h4 class="font-semibold text-agri-dark mb-2">Additional Services:</h4>
+                        <ul class="text-gray-600 space-y-1">
+                            <li>• Agricultural technology (Hydroponics)</li>
+                            <li>• Agro-business retailing</li>
+                            <li>• Agrochemical products</li>
+                            <li>• Support services</li>
+                            <li>• Veterinary supplies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-agri-green/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-handshake text-agri-green text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-agri-dark mb-3">Market Access</h3>
+                    <p class="text-gray-600 mb-4">
+                        Connect farmers with reliable markets for their produce and livestock.
+                    </p>
+                    <div class="bg-agri-green text-white rounded-lg p-6 text-center mt-4">
+                        <p class="font-semibold">Need a specific service?</p>
+                        <a href="#contact" class="inline-block bg-white text-agri-green px-6 py-2 rounded-lg mt-3 font-medium hover:bg-gray-100">
+                            Contact Us Today
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Download Section -->
+    <section id="brochure" class="py-20 bg-agri-dark text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <div class="max-w-3xl mx-auto">
+                <i class="fas fa-file-pdf text-6xl mb-6 text-agri-light animate-float"></i>
+                <h2 class="text-4xl font-bold mb-6">Download Our Company Brochure</h2>
+                <p class="text-xl mb-8 text-gray-300">
+                    Get detailed information about our services, pricing, and agricultural solutions in our comprehensive brochure.
+                </p>
+                <a href="brochure.pdf" download 
+                   class="inline-block bg-agri-light hover:bg-agri-green text-white px-10 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105 animate-pulse-slow">
+                    <i class="fas fa-download mr-3"></i> Download Brochure (PDF)
+                </a>
+                <p class="text-gray-400 mt-4 text-sm">
+                    File size: 2.5 MB | Updated: January 2024
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Principles -->
+    <section id="principles" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-agri-dark mb-4">
+                    Our Operational <span class="text-agri-green">Principles</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    Clear guidelines for professional and efficient service delivery
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Principle 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                        1
+                    </div>
+                    <h3 class="text-lg font-bold text-agri-dark mb-3">Strict Time Management</h3>
+                    <p class="text-gray-600">Punctual service delivery and adherence to agreed timelines.</p>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                        2
+                    </div>
+                    <h3 class="text-lg font-bold text-agri-dark mb-3">Professional Meetings</h3>
+                    <p class="text-gray-600">Meetings charged Kshs. 5000 per head per day for consultations.</p>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                        3
+                    </div>
+                    <h3 class="text-lg font-bold text-agri-dark mb-3">Signed Agreement</h3>
+                    <p class="text-gray-600">Formal signed agreement required before commencement of work.</p>
+                </div>
+
+                <!-- Principle 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                        4
+                    </div>
+                    <h3 class="text-lg font-bold text-agri-dark mb-3">Official Invitation</h3>
+                    <p class="text-gray-600">Official client invitation letter required for site visits.</p>
+                </div>
+
+                <!-- Principle 5 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover" data-aos="fade-up">
+                    <div class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                        5
+                    </div>
+                    <h3 class="text-lg font-bold text-agri-dark mb-3">Transport & Logistics</h3>
+                    <p class="text-gray-600">Client caters for all transport and logistical arrangements.</p>
+                </div>
+
+                <!-- Principle 6 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                        6
+                    </div>
+                    <h3 class="text-lg font-bold text-agri-dark mb-3">Safety & Security</h3>
+                    <p class="text-gray-600">Client provides adequate safety and security measures.</p>
+                </div>
+
+                <!-- Principle 7 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                        7
+                    </div>
+                    <h3 class="text-lg font-bold text-agri-dark mb-3">Payment Structure</h3>
+                    <p class="text-gray-600">Payments: 40% deposit, 30% midway, 20% near completion, 10% final.</p>
+                </div>
+
+                <!-- Principle 8 -->
+                <div class="bg-gray-50 rounded-xl p-6 card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                        8
+                    </div>
+                    <h3 class="text-lg font-bold text-agri-dark mb-3">Binding Agreement</h3>
+                    <p class="text-gray-600">All principles are binding to both parties for smooth operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership & Contacts -->
+    <section id="leadership" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-agri-dark mb-4">
+                    Our <span class="text-agri-green">Leadership</span> Team
+                </h2>
+                <p class="text-gray-600 text-lg max-w-3xl mx-auto">
+                    Meet the experts driving agricultural innovation in Kenya
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Denis Soita -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover" data-aos="flip-left">
+                    <div class="p-8">
+                        <div class="w-24 h-24 bg-agri-green/10 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-user-tie text-agri-green text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-agri-dark text-center mb-2">Denis Soita</h3>
+                        <p class="text-agri-green text-center font-semibold mb-6">Director – Agriculture & Livestock</p>
+                        
+                        <div class="space-y-4">
+                            <a href="tel:+254724372194" class="flex items-center text-gray-700 hover:text-agri-green">
+                                <i class="fas fa-phone text-agri-green mr-3"></i>
+                                <span>+254 724 372 194</span>
+                            </a>
+                            <a href="mailto:driptechahendaltd@gmail.com" class="flex items-center text-gray-700 hover:text-agri-green">
+                                <i class="fas fa-envelope text-agri-green mr-3"></i>
+                                <span>driptechahendaltd@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Isaac Ahenda -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover" data-aos="flip-left" data-aos-delay="100">
+                    <div class="p-8">
+                        <div class="w-24 h-24 bg-agri-green/10 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-cogs text-agri-green text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-agri-dark text-center mb-2">Isaac Ahenda</h3>
+                        <p class="text-agri-green text-center font-semibold mb-6">Director – Engineering</p>
+                        
+                        <div class="space-y-4">
+                            <a href="tel:+254702028819" class="flex items-center text-gray-700 hover:text-agri-green">
+                                <i class="fas fa-phone text-agri-green mr-3"></i>
+                                <span>+254 702 028 819</span>
+                            </a>
+                            <a href="mailto:driptechahendaltd@gmail.com" class="flex items-center text-gray-700 hover:text-agri-green">
+                                <i class="fas fa-envelope text-agri-green mr-3"></i>
+                                <span>driptechahendaltd@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- General Manager -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover" data-aos="flip-left" data-aos-delay="200">
+                    <div class="p-8">
+                        <div class="w-24 h-24 bg-agri-green/10 rounded-full mx-auto mb-6 flex items-center justify-center">
+                            <i class="fas fa-briefcase text-agri-green text-4xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-agri-dark text-center mb-2">General Manager</h3>
+                        <p class="text-agri-green text-center font-semibold mb-6">Operations & Administration</p>
+                        
+                        <div class="space-y-4">
+                            <a href="tel:+254706522048" class="flex items-center text-gray-700 hover:text-agri-green">
+                                <i class="fas fa-phone text-agri-green mr-3"></i>
+                                <span>+254 706 522 048</span>
+                            </a>
+                            <div class="flex items-center text-gray-700">
+                                <i class="fas fa-map-marker-alt text-agri-green mr-3"></i>
+                                <span>Nairobi Headquarters</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-agri-dark mb-8">
+                        Get In <span class="text-agri-green">Touch</span>
+                    </h2>
+                    
+                    <div class="space-y-8">
+                        <!-- Address -->
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-agri-green/10 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-agri-green text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-agri-dark mb-2">Our Address</h3>
+                                <p class="text-gray-600">
+                                    Beaver House, Tom Mboya Street<br>
+                                    P.O. Box 6341, 00100<br>
+                                    Nairobi, Kenya
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Details -->
+                        <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-agri-dark">Contact Details</h3>
+                            <div class="space-y-3">
+                                <a href="tel:+254724372194" class="flex items-center text-gray-700 hover:text-agri-green group">
+                                    <i class="fas fa-phone text-agri-green mr-3 group-hover:animate-pulse"></i>
+                                    <span>+254 724 372 194 (Director - Agriculture)</span>
+                                </a>
+                                <a href="tel:+254702028819" class="flex items-center text-gray-700 hover:text-agri-green group">
+                                    <i class="fas fa-phone text-agri-green mr-3 group-hover:animate-pulse"></i>
+                                    <span>+254 702 028 819 (Director - Engineering)</span>
+                                </a>
+                                <a href="tel:+254706522048" class="flex items-center text-gray-700 hover:text-agri-green group">
+                                    <i class="fas fa-phone text-agri-green mr-3 group-hover:animate-pulse"></i>
+                                    <span>+254 706 522 048 (General Manager)</span>
+                                </a>
+                                <a href="mailto:driptechahendaltd@gmail.com" class="flex items-center text-gray-700 hover:text-agri-green group">
+                                    <i class="fas fa-envelope text-agri-green mr-3 group-hover:animate-pulse"></i>
+                                    <span>driptechahendaltd@gmail.com</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours -->
+                        <div>
+                            <h3 class="text-xl font-bold text-agri-dark mb-3">Business Hours</h3>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <p class="text-gray-600"><span class="font-semibold">Monday - Friday:</span> 8:00 AM - 5:00 PM</p>
+                                <p class="text-gray-600"><span class="font-semibold">Saturday:</span> 9:00 AM - 1:00 PM</p>
+                                <p class="text-gray-600"><span class="font-semibold">Sunday:</span> Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-lg" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold text-agri-dark mb-6">Send Us a Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" id="name" required 
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-agri-green focus:ring-2 focus:ring-agri-green/20 transition duration-300">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" required 
+                                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-agri-green focus:ring-2 focus:ring-agri-green/20 transition duration-300">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" id="email" required 
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-agri-green focus:ring-2 focus:ring-agri-green/20 transition duration-300">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2">Service Interest</label>
+                            <select id="service" 
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-agri-green focus:ring-2 focus:ring-agri-green/20 transition duration-300">
+                                <option value="">Select a service</option>
+                                <option value="irrigation">Irrigation Systems</option>
+                                <option value="hydroponics">Hydroponics</option>
+                                <option value="veterinary">Veterinary Services</option>
+                                <option value="structures">Farm Structures</option>
+                                <option value="inputs">Farm Inputs</option>
+                                <option value="advisory">Agricultural Advisory</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" rows="5" required 
+                                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-agri-green focus:ring-2 focus:ring-agri-green/20 transition duration-300"></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-agri-green hover:bg-agri-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-agri-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="logo.jpg" alt="AHENDA DRIPTECH LIMITED Logo" class="w-12 h-12 rounded-lg">
+                        <div>
+                            <h3 class="text-xl font-bold">AHENDA DRIPTECH</h3>
+                            <p class="text-agri-light text-sm">LIMITED</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">
+                        Empowering Kenyan farmers through innovative agricultural technology and sustainable farming solutions.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-300 hover:text-agri-light transition duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-agri-light transition duration-300">About Us</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-agri-light transition duration-300">Services</a></li>
+                        <li><a href="#principles" class="text-gray-300 hover:text-agri-light transition duration-300">Principles</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-agri-light transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-300 hover:text-agri-light transition duration-300">Irrigation Systems</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-agri-light transition duration-300">Hydroponics</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-agri-light transition duration-300">Veterinary Services</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-agri-light transition duration-300">Farm Structures</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Footer -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <div class="space-y-3">
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt text-agri-light mr-3"></i>
+                            Beaver House, Tom Mboya St, Nairobi
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone text-agri-light mr-3"></i>
+                            +254 724 372 194
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope text-agri-light mr-3"></i>
+                            driptechahendaltd@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; <span id="currentYear"></span> AHENDA DRIPTECH LIMITED. All rights reserved. 
+                    <span class="block md:inline mt-2 md:mt-0">Proudly serving Kenyan farmers.</span>
+                </p>
+                <p class="text-gray-500 text-sm mt-2">
+                    Registered Company in Kenya | VAT No: Pending
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Social Media -->
+    <div class="fixed right-6 bottom-24 z-40 flex flex-col space-y-4">
+        <a href="https://wa.me/254724372194" target="_blank" 
+           class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-300 animate-pulse-slow">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" 
+           class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-300">
+            <i class="fab fa-facebook-f text-xl"></i>
+        </a>
+        <a href="tel:+254724372194" 
+           class="w-12 h-12 bg-agri-green text-white rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-300">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" 
+            class="fixed right-6 bottom-6 w-12 h-12 bg-agri-dark text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition duration-300 hidden z-40">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS JS CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.innerHTML = mobileMenu.classList.contains('hidden') 
+                ? '<i class="fas fa-bars text-2xl"></i>' 
+                : '<i class="fas fa-times text-2xl"></i>';
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTop.classList.remove('hidden');
+            } else {
+                backToTop.classList.add('hidden');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real implementation, you would send this data to a server
+            // Here we'll just show a success message
+            alert(`Thank you ${name}! Your message has been received. We'll contact you at ${phone} or ${email} regarding ${service} services shortly.`);
+            
+            // Reset form
+            this.reset();
+            
+            // Scroll to top
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Add hover effect to service cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+    </script>
+</body>
+</html>
